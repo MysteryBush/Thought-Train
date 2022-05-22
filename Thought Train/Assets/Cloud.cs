@@ -19,7 +19,6 @@ public class Cloud : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("enter");
         GameObject collisionGameObject = collision.gameObject;
         if (collisionGameObject.tag == "Player")
         {
