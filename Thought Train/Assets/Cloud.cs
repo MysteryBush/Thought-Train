@@ -5,6 +5,9 @@ using UnityEngine;
 public class Cloud : MonoBehaviour
 {
     public GameObject vision;
+    public GameObject lightObject;
+    public GameObject lightObject2;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +25,9 @@ public class Cloud : MonoBehaviour
         GameObject collisionGameObject = collision.gameObject;
         if (collisionGameObject.tag == "Player")
         {
-            vision.SetActive(true);
+            // vision.SetActive(true);
+            lightObject.SetActive(false);
+            lightObject2.SetActive(false);
         }
 
     }
@@ -32,7 +37,9 @@ public class Cloud : MonoBehaviour
         GameObject collisionGameObject = collision.gameObject;
         if (collisionGameObject.tag == "Player")
         {
-            vision.SetActive(false);
+            // vision.SetActive(false);
+            lightObject.SetActive(true);
+            lightObject2.SetActive(true);
         }
     }
 }

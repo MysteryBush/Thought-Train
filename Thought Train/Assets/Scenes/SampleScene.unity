@@ -2835,6 +2835,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1054705958 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8023997730773728840, guid: 451029f3ef6392d4c90f14b3f0832abb, type: 3}
+  m_PrefabInstance: {fileID: 4995331462424811507}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1091748646
 GameObject:
   m_ObjectHideFlags: 0
@@ -4347,7 +4352,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1581122301
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4380,8 +4385,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 980f35ca4318750408a50882e20b14fe, type: 2}
-  m_Color: {r: 0.4433962, g: 0.4433962, b: 0.4433962, a: 1}
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.3137255}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6021,21 +6026,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4995331461852970653, guid: 451029f3ef6392d4c90f14b3f0832abb, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 9fb7818666f264c4d91136cd278dc421, type: 3}
     - target: {fileID: 4995331461852970654, guid: 451029f3ef6392d4c90f14b3f0832abb, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4995331462424811514, guid: 451029f3ef6392d4c90f14b3f0832abb, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4995331462424811514, guid: 451029f3ef6392d4c90f14b3f0832abb, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 3.182143
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451029f3ef6392d4c90f14b3f0832abb, type: 3}
@@ -6050,6 +6043,14 @@ PrefabInstance:
       propertyPath: vision
       value: 
       objectReference: {fileID: 593145154}
+    - target: {fileID: 5342274148279877331, guid: fdbc0f1afbf70744f9edcd64697c831f, type: 3}
+      propertyPath: lightObject
+      value: 
+      objectReference: {fileID: 299997011}
+    - target: {fileID: 5342274148279877331, guid: fdbc0f1afbf70744f9edcd64697c831f, type: 3}
+      propertyPath: lightObject2
+      value: 
+      objectReference: {fileID: 1054705958}
     - target: {fileID: 5342274148279877332, guid: fdbc0f1afbf70744f9edcd64697c831f, type: 3}
       propertyPath: m_Name
       value: Cloud
@@ -6064,7 +6065,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5342274148279877334, guid: fdbc0f1afbf70744f9edcd64697c831f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.46
+      value: -3.77
       objectReference: {fileID: 0}
     - target: {fileID: 5342274148279877334, guid: fdbc0f1afbf70744f9edcd64697c831f, type: 3}
       propertyPath: m_LocalPosition.z
