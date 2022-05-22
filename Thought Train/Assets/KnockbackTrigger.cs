@@ -42,7 +42,7 @@ public class KnockbackTrigger : MonoBehaviour
             Debug.Log("difference = " + difference);
             pushObject.AddForce(difference, ForceMode2D.Impulse);
             playerMovement.getPushed();
-            Debug.Log("Ball pushed the player!");
+            // Debug.Log("Ball pushed the player!");
         }
     }
 }

@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator boolPushed()
     {
-        Debug.Log("Player just got pushed");
+        // Debug.Log("Player just got pushed");
         beingPushed = true;
         horizontalMove = 0;
 
@@ -65,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
             // rb.isKinematic = true;
             beingPushed = false;
             knockbackTrigger.gameObject.SetActive(true);
-            Debug.Log("Player is not being pushed");
+            // Debug.Log("Player is not being pushed");
         }
         yield return null;
     }
