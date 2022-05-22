@@ -39,7 +39,7 @@ public class KnockbackTrigger : MonoBehaviour
             difference = new Vector2(xValue, 1);
 
             difference = difference * ballForce.ballPush;
-            Debug.Log("difference = " + difference);
+            Debug.Log("Push Force = " + difference);
             pushObject.AddForce(difference, ForceMode2D.Impulse);
             playerMovement.getPushed();
             // Debug.Log("Ball pushed the player!");

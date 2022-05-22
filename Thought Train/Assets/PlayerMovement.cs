@@ -5,14 +5,17 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController2D controller;
-
+    private Animator anim;
     [SerializeField] private Rigidbody2D rb;
     public KnockbackTrigger knockbackTrigger;
     //Initial runSpeed
-    public float runSpeedInitial = 50f;
-    public float runSpeed = 40f;
+    public float walkSpeedInitial = 50f;
+    public float walkSpeed = 40f;
     float horizontalMove = 0f;
-    bool jump = false;
+    [SerializeField] bool jump = false;
+    //running
+    public float runSpeed = 60f;
+    bool run = false;
 
     // condition on being pushed
     public bool beingPushed = false;
@@ -21,7 +24,9 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        runSpeed = runSpeedInitial;
+        anim = GetComponent<Animator>();
+
+        walkSpeed = walkSpeedInitial;
         beingPushed = false;
     }
 
@@ -30,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (beingPushed == false)
         {
-            horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+            horizontalMove = Input.GetAxisRaw("Horizontal") * walkSpeed;
 
             if (Input.GetButtonDown("Jump") || Input.GetButtonDown("Jump2"))
             {
@@ -45,6 +50,9 @@ public class PlayerMovement : MonoBehaviour
         //Move our character
         controller.Move(horizontalMove * Time.deltaTime, false, jump);
         jump = false;
+
+        Animating(horizontalMove);
+        anim.SetFloat("Horizontal", horizontalMove);
     }
 
     public void getPushed()
@@ -68,5 +76,17 @@ public class PlayerMovement : MonoBehaviour
             // Debug.Log("Player is not being pushed");
         }
         yield return null;
+    }
+
+    void Animating(float x)
+    {
+        bool isWalking = x != 0f;
+        anim.SetBool("isWalking", isWalking);
+
+        // bool isJumping = jump;
+        // anim.SetBool("isJumping", isJumping);
+        anim.SetBool("isJumping", jump);
+
+        anim.SetBool("isRunning", run);
     }
 }

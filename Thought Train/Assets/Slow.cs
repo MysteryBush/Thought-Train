@@ -13,7 +13,7 @@ public class Slow : MonoBehaviour
             Rigidbody2D slowObject = collisionGameObject.GetComponent<Rigidbody2D>();
             PlayerMovement playerMovement = collisionGameObject.GetComponent<PlayerMovement>();
             slowObject.velocity *= 999f/1000f;
-            playerMovement.runSpeed = onSlowSpeed;
+            playerMovement.walkSpeed = onSlowSpeed;
         }
 
     }
@@ -26,7 +26,7 @@ public class Slow : MonoBehaviour
             Rigidbody2D slowObject = collisionGameObject.GetComponent<Rigidbody2D>();
             PlayerMovement playerMovement = collisionGameObject.GetComponent<PlayerMovement>();
             slowObject.velocity *= 0;
-            playerMovement.runSpeed = playerMovement.runSpeedInitial;
+            playerMovement.walkSpeed = playerMovement.walkSpeedInitial;
         }
     }
 }
